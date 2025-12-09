@@ -321,7 +321,7 @@ class _MaterialControlsState extends State<MaterialControls>
     );
   }
 
-  GestureDetector _buildExpandButton() {
+  Widget _buildExpandButton() {
     return GestureDetector(
       onTap: _onExpandCollapse,
       child: AnimatedOpacity(
@@ -329,8 +329,7 @@ class _MaterialControlsState extends State<MaterialControls>
         duration: const Duration(milliseconds: 300),
         child: Container(
           height: barHeight + (chewieController.isFullScreen ? 15.0 : 0),
-          margin: const EdgeInsets.only(right: 12.0),
-          padding: const EdgeInsets.only(left: 8.0, right: 8.0),
+          padding: const EdgeInsets.only(left: 8.0, right: 0),
           child: Center(
             child: Icon(
               chewieController.isFullScreen
